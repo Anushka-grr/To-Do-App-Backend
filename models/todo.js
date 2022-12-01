@@ -9,8 +9,8 @@ const ToDoSchema = new mongoose.Schema({
   //to do status can be 'pending' or 'done'
   status: {
     type: String,
-    enum: ["Pending", "Done"],
-    default: "Pending",
+    enum: ["pending", "done"],
+    default: "pending",
   },
 });
 

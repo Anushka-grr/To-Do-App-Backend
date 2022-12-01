@@ -29,8 +29,7 @@ npm i
 npm start
 ```
 
-Create a .env file
-The .env file will contain the URI connection string. This contains the user, password, host address as well as database and extra connection options for connecting to your MongoDB database.
+Create a .env file. The .env file will contain the URI connection string. This contains the user, password, host address as well as database and extra connection options for connecting to your MongoDB database.
 
 ```sh
 MONGO_URI='mongo+srv://<user>:<pass>@<host>:<port>/<database>?<connection options>'

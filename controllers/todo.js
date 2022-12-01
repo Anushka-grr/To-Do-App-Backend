@@ -65,7 +65,7 @@ const editTodo = async (req, res) => {
     const toDoId = req.params.toDoId;
     const toDo = await ToDo.findByIdAndUpdate(
       toDoId,
-      { status: "Done" },
+      { status: "done" },
       { returnDocument: "after" } //returns updated document
     );
     if (!toDo) {
