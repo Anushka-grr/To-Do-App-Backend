@@ -1,16 +1,16 @@
-//todo=> description, id, status - pending/done
 const mongoose = require("mongoose");
-mongoose.Schema.Types.Boolean.convertToFalse.add("pending");
-mongoose.Schema.Types.Boolean.convertToTrue.add("done");
 
 const ToDoSchema = new mongoose.Schema({
+  //description of the to do
   description: {
     type: String,
     required: [true, "Description cannot be empty"],
   },
+  //to do status can be 'pending' or 'done'
   status: {
-    type: Boolean,
-    default: "pending",
+    type: String,
+    enum: ["Pending", "Done"],
+    default: "Pending",
   },
 });
 
